@@ -1,6 +1,7 @@
-# Portfolio Planning 
+# Portfolio Website
+[Su's website](https://ktsuw.github.io/r4_portfolio/)
 
-This repo contains react code. I wanted to learn more about React components and hook and have rebuilt [this simple portfolio website (HTML + CSS + JavaScript)](https://ktsuw.github.io/portfolio/) with Reactjs.
+This repo contains react code. I wanted to learn more about React components and hook. This [this simple portfolio website (HTML + CSS + JavaScript)](https://ktsuw.github.io/portfolio/) site has been rebuilt with Reactjs.
 
 ## Planning
 
@@ -35,6 +36,30 @@ This repo contains react code. I wanted to learn more about React components and
 - React icons are always SVG
 - {children} property
 - Attribute destructuring : you don't have to define every single property 
-  - 
+- props - properties
+  - object argument with data and returns a React element
+  - props are read only 
+- Add CSS class to components 
+  - className= {classname in CSS}
 
+## Deploy to GitHub page
 
+1. Create repo
+2. Add URL and repo name to the package.json
+
+  ```
+      "homepage": "https://ktSuW.github.io/r4_portfolio",
+      "name": "r4_portfolio",
+  ```
+3. Install npm package for github pages
+
+  ``` 
+      npm install gh-pages --save-dev
+  ```
+4. Add scripts to package.json so that you can run `npm run deploy`
+
+  ```
+    "predeploy" :"npm run build",
+    "deploy" : "gh-pages -d build"
+  ```
+5. Execute => **npm run deploy**
