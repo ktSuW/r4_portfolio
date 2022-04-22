@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.progressText {
+.progressBar p {
   position: absolute;
   left: 1rem;
   top: 0.5rem;
@@ -16,13 +16,13 @@
   color: #333;
 }
 
-.progressText span {
+.progressBar span {
   margin: 0 0.5rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-.progressPercent {
+.progressBar div {
   width: 0%;
   height: 100%;
   background-color: #f4b400;

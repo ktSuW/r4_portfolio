@@ -95,7 +95,7 @@ function App() {
       key: 1,
       projectName: "Travel Website - Bootstrap",
       projectTechnologies: "HTML, CSS, JavaScript",
-      img: "images/project-1.jpg",
+      img: "/images/project-1.jpg",
       href: "https://github.com/ktSuW/js_projects_practice/tree/master/travel_bootstrap",
       goTo: "Go to the source",
     },
@@ -103,7 +103,7 @@ function App() {
       key: 2,
       projectName: "Guess My Number",
       projectTechnologies: "HTML, CSS, JavaScript",
-      img: "images/project-2.jpg",
+      img: "/images/project-2.jpg",
       href: "https://github.com/ktSuW/js_projects_practice/tree/master/guess_my_number",
       goTo: "Go to the source",
     },
@@ -111,7 +111,7 @@ function App() {
       key: 3,
       projectName: "Form Validator",
       projectTechnologies: "HTML, CSS, JavaScript",
-      img: "images/project-3.jpg",
+      img: "/images/project-3.jpg",
       href: "https://github.com/ktSuW/js_projects_practice/tree/master/form_validator",
       goTo: "Go to the source",
     },
@@ -119,7 +119,7 @@ function App() {
       key: 4,
       projectName: "Data Structure and Algorithms",
       projectTechnologies: "JavaScript & Java",
-      img: "images/project-4.jpg",
+      img: "/images/project-4.jpg",
       href: "https://www.youtube.com/watch?v=KrExoVSBSW4&ab_channel=ktsuw_21",
       goTo: "Go to YouTube",
     },
@@ -127,7 +127,7 @@ function App() {
       key: 5,
       projectName: "Guess My Number",
       projectTechnologies: "HTML, CSS, JavaScript",
-      img: "images/project-5.jpg",
+      img: "/images/project-5.jpg",
       href: "https://github.com/ktSuW/js_projects_practice/tree/master/guess_my_number",
       goTo: "Go to the source",
     },
@@ -135,51 +135,52 @@ function App() {
       key: 6,
       projectName: "Stop Watch",
       projectTechnologies: "HTML, CSS, JavaScript",
-      img: "images/project-6.jpg",
+      img: "/images/project-6.jpg",
       href: "#",
       goTo: "Go to the source",
     },
   ];
 
-
-
   return (
     <div className='App'>
       <Header />
-      <Navigation links={links} />
-      <SectionComponent heading='About'>
-        <div className='skills'>
-          {skills.map(({ key, icon, skillHeading }) => (
-            <Skill key={key} icon={icon} title={skillHeading} />
-          ))}
-        </div>
-        <div className='progressBarsWrapper'>
-          <div className='languages'>
-            {languages.map(({ key, language, percent }) => (
-              <ProgressBar key={key} language={language} percent={percent} />
+      <div className="pageWrapper">
+        <Navigation links={links} className="navWrapper"/>
+        <SectionComponent heading='About'>
+          <div className='skills'>
+            {skills.map(({ key, icon, skillHeading }) => (
+              <Skill key={key} icon={icon} title={skillHeading} />
             ))}
           </div>
-        </div>
-      </SectionComponent>
-      <SectionComponent heading='Projects'>
-        <div className='projectsWrapper center'>
-          {projects.map(
-            ({ key, projectName, projectTechnologies, img, href, goTo }) => (
-              <Project
-                key={key}
-                projectName={projectName}
-                projectTechnologies={projectTechnologies}
-                img={img}
-                href={href}
-                goTo={goTo}
-              />
-            )
-          )}
-        </div>
-      </SectionComponent>
-      <SectionComponent heading='Contact Me'>
-        <ContactForm />
-      </SectionComponent>
+          <div className='progressBarsWrapper'>
+            <div className='languages'>
+              {languages.map(({ key, language, percent }) => (
+                <ProgressBar key={key} language={language} percent={percent} />
+              ))}
+            </div>
+          </div>
+        </SectionComponent>
+        <SectionComponent heading='Projects'>
+          <div className='projectsWrapper center'>
+            {projects.map(
+              ({ key, projectName, projectTechnologies, img, href, goTo }) => (
+                <Project
+                  key={key}
+                  projectName={projectName}
+                  projectTechnologies={projectTechnologies}
+                  img={img}
+                  href={href}
+                  goTo={goTo}
+                />
+              )
+            )}
+          </div>
+        </SectionComponent>
+        <SectionComponent heading='Contact Me'>
+          <ContactForm />
+        </SectionComponent>
+      </div>
+
       <Footer></Footer>
     </div>
   );

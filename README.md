@@ -63,3 +63,8 @@ This repo contains react code. I wanted to learn more about React components and
     "deploy" : "gh-pages -d build"
   ```
 5. Execute => **npm run deploy**
+
+- GitHub page deployment for package.json
+
+-  "homepage": "https://ktSuW.github.io/r4_portfolio"
+- "name": "r4_portfolio",

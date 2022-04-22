@@ -20,6 +20,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* .pageWrapper {
+  position: relative;
+
+} */
+
+.navWrapper {
+  position: sticky;
+  top : 0;
+  z-index: 1;
+}
+
 /************** ABOUT *****************/
 .progressBarsWrapper {
   margin-bottom: 10rem;
